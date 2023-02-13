@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./image/retro-draw.svg" type="image/x-icon">
+  <title>Retro-sketch</title>
+</head>
+<body>
+  <section class="container">
+    <header>
+      <h1>Retro Sketch</h1>
+      <p>Use the slider to make 16 &times; 16 grid and more ...</p>
+      <p>Select mode to make grid background color</p>
+    </header>
+    <main>
+      <div class="range-row">
+        <button type="button" class="mode-btn neutral-btn btn">Neutral mode</button>
+        <button type="button" class="mode-btn rainbow-btn btn">Rainbow mode</button>
+        <div class="range-wrapper">
+          <label for="size">Create grid <span class="grid-size">(16 &times; 16)</span></label>
+          <input type="range" name="size" id="size" min="1" max="48" value="1">
+        </div>
+        <label for="color">Change neutral mode color</label>
+        <input type="color" name="color" id="color" value="#cc0000">
+        <button type="button" class="grid-reset remove-btn btn">Erase grid mode</button>
+        <button type="button"class="grid-reset clear-btn">Clear grid</button>
+      </div>
+      <div class="grid-row">
+      
+      </div>
+    </main>
+    <footer>
+      <p>Designed by CJay <a href="https://github.com/goodcodercj" target="_blank"><img src="./image/github-logo.png" alt="Github logo" class="github-logo"></a> copyright &copy; <span id="date"></span></p>
+      <script>
+        const date = new Date();
+        document.querySelector("#date").textContent =date.getFullYear()
+      </script>
+    </footer>
+  </section>
+  <script src="./script.js"></script>
+</body>
+</html>

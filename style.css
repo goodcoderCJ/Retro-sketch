@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: white;
+}
+img {
+  max-width: 100%;
+}
+.github-logo {
+  width: 18px;
+  height: 18px;
+}
+
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: 4em auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: rgb(148, 10, 10);
+}
+header p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.5;
+}
+header p,
+footer {
+  color: #000;
+}
+main {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 8em;
+  padding: 0.5em 0.5em;
+  background-color: rgb(12, 6, 6);
+  border: 1px solid rgb(14, 20, 14);
+}
+.range-row {
+  display: flex;
+  flex-direction: column;
+}
+.range-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.grid-row {
+  border: 1px solid red;
+  max-width: 600px;
+  width: 600px;
+  height: 600px;
+  display: grid;
+  gap: 1px;
+}
+.grid-items {
+  background-color: rgb(148, 10, 10);
+}
+button {
+  width: 70%;
+  border: 3px solid rgb(148, 10, 10);
+  background-color: transparent;
+  color: white;
+  margin-bottom: 1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.active {
+  background-color: rgb(148, 10, 10);
+  border: none;
+}
+#size {
+  margin: 1em 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgb(148, 10, 10);
+  height: 5px;
+  border-radius: 5px;
+}
+#size::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+#color {
+  margin: 1em 0;
+}
+
+footer {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+}
+@media (max-width: 600px) {
+  button {
+    width: 40%;
+  }
+  #size {
+    width: 100%;
+  }
+  main {
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 3em;
+  }
+  .range-row {
+    width: 100%;
+    align-items: center;
+  }
+  .grid-row {
+    width: 100%;
+  }
+}
+@media (max-width: 300px) {
+  button {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+}
