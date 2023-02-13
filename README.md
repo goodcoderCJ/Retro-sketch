@@ -13,4 +13,4 @@ This project is about making a retro sketch by:
 
 Using Javascript _this_ in a function event handler returns the global window object. It was a block that took me using the _console_ to figure out.
 
-preview site: [Retro site](https://retro-sketch.netlify.app/)
+Preview site: [Retro-sketch site](https://retro-sketch.netlify.app/)
